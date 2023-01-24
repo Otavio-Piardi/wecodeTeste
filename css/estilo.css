@@ -1,0 +1,38 @@
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display?styles=98774,98773,98770');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'SF Pro Display', sans-serif;
+    text-decoration: none;
+}
+
+.menu {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 19px 16px;
+    background-color: #232323;
+    width: 100%;
+}
+
+/* CACHORRISSE EXTREMA - RESOLVER!!!!! */
+.logo {
+    padding-left: 40px;
+}
+
+.pesquisar-carrinho{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 13px;
+}
+
+.principal {
+    padding-top: 68px;
+    height: 1000px;
+}
