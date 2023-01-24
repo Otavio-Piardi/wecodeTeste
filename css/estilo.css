@@ -9,6 +9,10 @@
     text-decoration: none;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .menu {
     position: fixed;
     display: flex;
@@ -34,5 +38,62 @@
 
 .principal {
     padding-top: 68px;
-    height: 1000px;
+}
+
+.slider{
+    display: block;
+    height: 560px;
+    width: 375px;
+    margin: auto;
+    position: relative;
+}
+
+.slider li {
+    list-style: none;
+    position: absolute;
+    
+}
+
+.slider img{
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    vertical-align: top;
+}
+
+.slider input{
+    display: none;
+}
+
+.slider label{
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    width: 32px;
+    height: 8px;
+    bottom: 10px;
+    z-index: 10;   
+}
+
+.slider li:nth-child(1) label {
+    left: 10px;
+}
+
+.slider li:nth-child(2) label {
+    left: 40px;
+}
+
+.slider li:nth-child(3) label {
+    left: 70px;
+}
+
+.slider img {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slider li input:checked ~ img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
 }
