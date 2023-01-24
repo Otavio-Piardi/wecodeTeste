@@ -9,7 +9,7 @@
     text-decoration: none;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -22,6 +22,7 @@ html{
     padding: 19px 16px;
     background-color: #232323;
     width: 100%;
+    z-index: 4;
 }
 
 /* CACHORRISSE EXTREMA - RESOLVER!!!!! */
@@ -29,7 +30,7 @@ html{
     padding-left: 40px;
 }
 
-.pesquisar-carrinho{
+.pesquisar-carrinho {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -40,7 +41,7 @@ html{
     padding-top: 68px;
 }
 
-.slider{
+.slider {
     display: block;
     height: 560px;
     width: 375px;
@@ -51,28 +52,30 @@ html{
 .slider li {
     list-style: none;
     position: absolute;
-    
+
 }
 
-.slider img{
+.slider img {
     margin: auto;
     height: 100%;
     width: 100%;
     vertical-align: top;
 }
 
-.slider input{
+.slider input {
     display: none;
 }
 
-.slider label{
+.slider label {
     position: absolute;
     display: block;
     cursor: pointer;
-    width: 32px;
+    width: 8px;
     height: 8px;
+    border-radius: 50%;
     bottom: 10px;
-    z-index: 10;   
+    z-index: 10;
+    background-color: #232323;
 }
 
 .slider li:nth-child(1) label {
@@ -92,8 +95,33 @@ html{
     visibility: hidden;
 }
 
-.slider li input:checked ~ img {
+.slider li input:checked~img {
     opacity: 1;
     visibility: visible;
-    z-index: 10;
+    z-index: 3;
+}
+
+.banner {
+    width: 375px;
+}
+
+.grupo-departamentos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0 16px;
+    margin-top: 32px;
+}
+
+
+.legenda-departamento {
+    font-size: 14px;
+    line-height: 21px;
+    position: relative;
+    bottom: 92px;
+    left: 35px;
+    color: #FFFFFF;
+    max-width: fit-content;
+    text-align: center;
 }
