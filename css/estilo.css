@@ -125,21 +125,24 @@ html {
 }
 
 
-.legenda-departamento {
-    font-size: 14px;
+.legenda-departamento, .texto-banner-central {
     line-height: 0;
     position: relative;
-    bottom: 92px;
-    left: 35px;
     color: #FFFFFF;
-    max-width: fit-content;
+    
+}
+
+.legenda-departamento {
+    bottom: 82px;
+    font-size: 14px;
     text-align: center;
 }
 
-/* PRODUTOS MAIS VENDIDOS */
+/* PRODUTOS VIEW */
 
-.mais-vendidos {
+.produtos-view {
     padding: 0 16px;
+    margin-bottom: 30px;
 }
 
 .slider-produto {
@@ -149,6 +152,10 @@ html {
     align-items: flex-start;
     gap: 12px;
     overflow-x: scroll;
+}
+
+.slider-produto::-webkit-scrollbar{
+    display: none;
 }
 
 .titulo-section {
@@ -232,4 +239,25 @@ html {
 
 .cafe-pequeno {
     background-image: url('../img/Imagem-home-produto-3.png');
+}
+
+/* BANNER CENTRAL */
+
+.banner-central {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.banner-central img{
+    min-height: 320px;
+    max-width: max-content;
+}
+
+.texto-banner-central {
+    bottom: 147px;
+    font-size: 18px;
+    text-align: right;
+    right: 16px;
+    text-decoration: underline;
 }
