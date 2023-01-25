@@ -37,9 +37,13 @@ html {
     gap: 13px;
 }
 
+/* MAIN */
+
 .principal {
     padding-top: 68px;
 }
+
+/* BANNER HOME PRINCIPAL */
 
 .slider {
     display: block;
@@ -105,23 +109,127 @@ html {
     width: 375px;
 }
 
+/* DEPARTAMENTOS */
+
+.departamento {
+    max-height: 163px;
+}
+
 .grupo-departamentos {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0 16px;
+    gap: 24px 16px;
     margin-top: 32px;
 }
 
 
 .legenda-departamento {
     font-size: 14px;
-    line-height: 21px;
+    line-height: 0;
     position: relative;
     bottom: 92px;
     left: 35px;
     color: #FFFFFF;
     max-width: fit-content;
     text-align: center;
+}
+
+/* PRODUTOS MAIS VENDIDOS */
+
+.mais-vendidos {
+    padding: 0 16px;
+}
+
+.slider-produto {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 12px;
+    overflow-x: scroll;
+}
+
+.titulo-section {
+    font-size: 20px;
+    font-weight: lighter;
+    line-height: 30px;
+    margin-bottom: 13px;
+    margin-top: 32px;
+}
+
+.produto {
+    padding: 24px;
+    color: #FFFFFF;
+    min-width: 269px;
+    height: 403px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.produto-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nome-produto {
+    font-size: 14px;
+    line-height: 21px;
+    width: 133px;
+}
+
+.produto-valor {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.valor-normal {
+    text-decoration: line-through;
+}
+
+.valor-desconto {
+    color: #EEFF49;
+    font-weight: bold;
+}
+
+.produto-bottom,
+.produto-bottom-lancamento {
+    display: flex;
+    flex-direction: row;
+}
+
+.produto-bottom-lancamento {
+    justify-content: space-between;
+}
+
+.produto-bottom {
+    justify-content: flex-end;
+}
+
+.produto-lancamento{
+    color: #232323;
+    font-size: 12px;
+    line-height: 18px;
+    background-color: #EEFF49;
+    padding: 2px 8px;
+}
+
+.cafe-medio {
+    background-image: url('../img/Imagem-home-produto-1.png');
+}
+
+.cafe-grande {
+    background-image: url('../img/Imagem-home-produto-2.png');
+}
+
+.cafe-pequeno {
+    background-image: url('../img/Imagem-home-produto-3.png');
 }
