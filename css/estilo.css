@@ -6,6 +6,7 @@
     border: 0;
     box-sizing: border-box;
     font-family: 'SF Pro Display', sans-serif;
+    font-weight: 100;
     text-decoration: none;
 }
 
@@ -125,11 +126,12 @@ html {
 }
 
 
-.legenda-departamento, .texto-banner-central {
+.legenda-departamento,
+.texto-banner-central {
     line-height: 0;
     position: relative;
     color: #FFFFFF;
-    
+
 }
 
 .legenda-departamento {
@@ -141,8 +143,8 @@ html {
 /* PRODUTOS VIEW */
 
 .produtos-view {
-    padding: 0 16px;
     margin-bottom: 30px;
+    margin-top: 32px;
 }
 
 .slider-produto {
@@ -152,18 +154,18 @@ html {
     align-items: flex-start;
     gap: 12px;
     overflow-x: scroll;
+    padding: 0 16px;
 }
 
-.slider-produto::-webkit-scrollbar{
+.slider-produto::-webkit-scrollbar,
+.slider-footer-topo::-webkit-scrollbar {
     display: none;
 }
 
 .titulo-section {
     font-size: 20px;
     font-weight: lighter;
-    line-height: 30px;
-    margin-bottom: 13px;
-    margin-top: 32px;
+    margin: 0 16px 13px 16px;
 }
 
 .produto {
@@ -185,7 +187,6 @@ html {
 
 .nome-produto {
     font-size: 14px;
-    line-height: 21px;
     width: 133px;
 }
 
@@ -195,7 +196,6 @@ html {
     justify-content: flex-end;
     align-items: flex-end;
     font-size: 16px;
-    line-height: 24px;
 }
 
 .valor-normal {
@@ -221,7 +221,7 @@ html {
     justify-content: flex-end;
 }
 
-.produto-lancamento{
+.produto-lancamento {
     color: #232323;
     font-size: 12px;
     line-height: 18px;
@@ -249,7 +249,7 @@ html {
     gap: 0;
 }
 
-.banner-central img{
+.banner-central img {
     min-height: 320px;
     max-width: max-content;
 }
@@ -260,4 +260,155 @@ html {
     text-align: right;
     right: 16px;
     text-decoration: underline;
+}
+
+/* FOOTER */
+
+.slider-footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #F8F8F8;
+    color: #8A8A8A;
+    padding-top: 24px;
+    height: 82px;
+}
+
+.slider-footer-topo,
+.slide-footer-group,
+.vtexbywecode,
+.slide-footer-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.slider-footer-topo {
+    overflow-x: auto;
+    padding: 0 40px 0 50px;
+    gap: 150px;
+}
+
+.slide-footer-group {
+    justify-content: center;
+    gap: 64px;
+}
+
+.slide-footer-info {
+    min-width: 115px;
+    gap: 6px;
+    font-size: 12px;
+}
+
+.slide-footer-label-group {
+    height: 20px;
+    display: block;
+    align-items: center;
+}
+
+.slide-footer-label-bola {
+    background-color: #8A8A8A;
+    width: 6px;
+    height: 6px;
+
+}
+
+/* SEÇÃO PRINCIPAL DO FOOTER */
+
+.principal-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 56px;
+    background-color: #232323;
+    color: #FFFFFF;
+    padding: 56px 16px;
+}
+
+.logo-wecode-footer {
+    height: 40px;
+    width: fit-content;
+}
+
+.titulo-footer {
+    display: inline-block;
+    font-size: 20px;
+    border-bottom: 1px solid #FFFFFF;
+    font-weight: 100;
+    padding-bottom: 5px;
+    outline: none;
+}
+
+.footer-newsletter-text {
+    margin: 12px 0 9px 0;
+}
+
+.enviar-email {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.enviar-email input {
+    width: 100%;
+    height: 40px;
+    padding: 13px;
+}
+
+.enviar-email input::-webkit-input-placeholder {
+    color: #B7B7B7;
+    font-size: 14px;
+}
+
+.enviar-email button {
+    background-color: #EEFF49;
+    width: 90px;
+    height: 40px;
+}
+
+.icones-redes {
+    margin-top: 22px;
+    display: flex;
+    gap: 24px;
+}
+
+.icone-rede-social {
+    width: 24px;
+}
+
+.gavetas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 12px;
+}
+
+.selos {
+    font-size: 14px;
+    color: #393939;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 119px;
+    padding: 24px;
+    gap: 8px;
+}
+
+.copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #232323;
+    color: #FFFFFF;
+    font-size: 10px;
+    padding: 24px 25px;
+    gap: 12px;
+}
+
+.vtexbywecode {
+    background-color: #142032;
+    height: 42px;
+    justify-content: center;
 }
