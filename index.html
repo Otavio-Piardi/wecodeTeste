@@ -16,6 +16,7 @@
     <!-- NAV BAR -->
     <header class="topo">
         <nav class="menu">
+            <!-- MENU LATERAL -->
             <div class="hamburguer">
                 <img src="img/icon-header-menu.svg" id="btnAbrirMenuLateral">
                 <div id="menuLateral" class="menuLateral effect" style="margin-left: -269px;">
@@ -32,15 +33,28 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Fazer usuário e tal -->
                     <ul>
-                        <li class="parte-menu-2"><p>Departamento 1</p></li>
-                        <li class="parte-menu-3"><p>Departamento 2</p></li>
-                        <li class="parte-menu-4"><p>Departamento 3</p></li>
-                        <li class="parte-menu-5"><p>Departamento 4</p></li>
-                        <li class="parte-menu-6"><p>Departamento 5</p></li>
-                        <li class="parte-menu-7"><p>Departamento 6</p></li>
-                        <li class="parte-menu-8"><p>Sair</p></li>
+                        <li class="parte-menu-2">
+                            <p>Departamento 1</p>
+                        </li>
+                        <li class="parte-menu-3">
+                            <p>Departamento 2</p>
+                        </li>
+                        <li class="parte-menu-4">
+                            <p>Departamento 3</p>
+                        </li>
+                        <li class="parte-menu-5">
+                            <p>Departamento 4</p>
+                        </li>
+                        <li class="parte-menu-6">
+                            <p>Departamento 5</p>
+                        </li>
+                        <li class="parte-menu-7">
+                            <p>Departamento 6</p>
+                        </li>
+                        <li class="parte-menu-8">
+                            <p>Sair</p>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -306,11 +320,42 @@
                     <a href="http://facebook.com"><img src="img/icon-footer-facebook.svg" class="icone-rede-social"></a>
                 </div>
             </div>
-            <div class="gavetas">
-                <p>sobre nós</p>
-                <p>minha conta</p>
-                <p>políticas</p>
-                <p>contato</p>
+            <div class="gavetas" id="gavetas">
+                <ul>
+                    <li>
+                        <a id="link-gaveta-sobre-fechado" href="#redes-sociais"><p>Sobre nós</p><p>+</p></a>
+                        <a id="link-gaveta-sobre-aberto" href="#redes-sociais"><p class="texto-link-aberto">Sobre nós</p><p>-</p></a>
+                        <ul id="elementos-gaveta-sobre">
+                            <li><a href="#redes-sociais">Quem somos nós</a></li>
+                            <li><a href="#redes-sociais">Nosso grupo</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a id="link-gaveta-conta-fechado" href="#redes-sociais"><p>Minha conta</p><p>+</p></a>
+                        <a id="link-gaveta-conta-aberto" href="#redes-sociais"><p class="texto-link-aberto">Minha conta</p><p>-</p></a>
+                        <ul id="elementos-gaveta-conta">
+                            <li><a href="#redes-sociais">Meu perfil</a></li>
+                            <li><a href="#redes-sociais">Meus pedidos</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a id="link-gaveta-politicas-fechado" href="#redes-sociais"><p>Politicas</p><p>+</p></a>
+                        <a id="link-gaveta-politicas-aberto" href="#redes-sociais"><p class="texto-link-aberto">Politicas</p><p>-</p></a>
+                        <ul id="elementos-gaveta-politicas">
+                            <li><a href="#redes-sociais">Políticas de troca e devolução</a></li>
+                            <li><a href="#redes-sociais">Políticas de Privacidade</a></li>
+                            <li><a href="#redes-sociais">Termos de Uso</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a id="link-gaveta-contato-fechado" href="#redes-sociais"><p>Contato</p><p>+</p></a>
+                        <a id="link-gaveta-contato-aberto" href="#redes-sociais"><p class="texto-link-aberto">Contato</p><p>-</p></a>
+                        <ul id="elementos-gaveta-contato">
+                            <li><p>Tel.: (54)3028-9452</p></li>
+                            <li><p>Rua Plácido de Castro, 1063 - Sala 403 - Exposição, Caxias do Sul - RS, 95084-370</p></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </section>
         <div class="selos">

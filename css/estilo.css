@@ -47,7 +47,12 @@ html {
     gap: 15px;
 }
 
-.quadrado1, .quadrado2 {
+.fotoUsuario {
+    padding-left: 2px;
+}
+
+.quadrado1,
+.quadrado2 {
     width: 68px;
     height: 68px;
     border-radius: 8px;
@@ -149,7 +154,6 @@ html {
     color: #828282;
 }
 
-/* CACHORRISSE EXTREMA - RESOLVER!!!!! */
 .logo {
     padding-left: 40px;
 }
@@ -500,11 +504,57 @@ html {
     width: 24px;
 }
 
-.gavetas {
+/* MENU DE NÍVEIS FOOTER */
+
+.gavetas ul li {
+    list-style: none;
+    line-height: 27px;
+}
+
+.gavetas ul li a {
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 27px;
+    margin-bottom: 12px;
+}
+
+.gavetas ul li p.gaveta-link-plus {
+    display: inline;
+}
+
+.gavetas ul ul {
+    padding-left: 12px;
+}
+
+.gavetas ul li ul li a,
+.gavetas ul li ul li p {
+    display: block;
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 12px;
+}
+
+.gaveta-link-minus {
+    display: none;
+}
+
+.texto-link-aberto {
+    text-decoration: underline;
+}
+
+.visivel-link {
     display: flex;
-    flex-direction: column;
-    gap: 12px;
-    font-size: 12px;
+    justify-content: space-between;
+}
+
+.visivel-ul {
+    display: block;
+    transition: width 0.4s;
+}
+
+.invisivel {
+    display: none;
 }
 
 .selos {
