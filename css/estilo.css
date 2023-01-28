@@ -14,6 +14,11 @@ html {
     scroll-behavior: smooth;
 }
 
+a {
+    color: #FFFFFF;
+}
+
+
 .menu {
     position: fixed;
     display: flex;
@@ -26,7 +31,7 @@ html {
     z-index: 4;
 }
 
-#btnFecharMenuLateral {
+#btn-fechar-menu-lateral {
     width: 20px;
     height: 20px;
     background-color: #878787;
@@ -35,7 +40,7 @@ html {
     border-radius: 5px;
 }
 
-#btnFecharMenuLateral:hover {
+#btn-fechar-menu-lateral:hover {
     background-color: #c7c7c7;
 }
 
@@ -75,13 +80,13 @@ html {
     color: #FFFFFF;
 }
 
-.nomeDestaque {
+.nome-destaque {
     font-size: 18px;
     color: #EEFF49;
     font-weight: bold;
 }
 
-.menuLateral {
+.menu-lateral {
     position: fixed;
     top: 0;
     left: 0;
@@ -92,66 +97,139 @@ html {
     overflow-y: scroll;
 }
 
-.menuLateral ul {
+.menu-lateral ul {
     list-style: none;
 }
 
-.menuLateral ul li {
+.menu-lateral ul li {
     display: block;
-    padding: 0 16px;
+    padding-left: 24px;
 }
 
-.menuLateral ul li p {
-    transition: background 0.3s;
+.menu-lateral ul li a {
     display: block;
     font-size: 18px;
     line-height: 27px;
-    text-decoration: none;
-    padding: 36px 0;
+}
+
+.menu-lateral ul ul {
+    padding-top: 18px;
 }
 
 .effect {
     transition: margin 0.4s;
 }
 
+.parte-menu-1,
+.parte-menu-2,
+.parte-menu-3,
+.parte-menu-4,
+.parte-menu-5 {
+    color: #FFFFFF;
+}
+
+.parte-menu-6,
+.parte-menu-7 {
+    color: #232323;
+}
+
+.parte-menu-2,
+.parte-menu-3,
+.parte-menu-4,
+.parte-menu-5,
+.parte-menu-6,
+.parte-menu-7,
+.parte-menu-8 {
+    padding: 36px 16px;
+    font-size: 18px;
+}
+
 .parte-menu-1 {
     background-color: #232323;
     padding: 24px 16px;
-    color: #FFFFFF;
 }
 
 .parte-menu-2 {
     background-color: #343434;
-    color: #FFFFFF;
 }
 
 .parte-menu-3 {
     background-color: #464646;
-    color: #FFFFFF;
 }
 
 .parte-menu-4 {
     background-color: #5A5A5A;
-    color: #FFFFFF;
 }
 
 .parte-menu-5 {
     background-color: #7C7C7C;
-    color: #FFFFFF;
 }
 
 .parte-menu-6 {
     background-color: #AEAEAE;
-    color: #232323;
 }
 
 .parte-menu-7 {
     background-color: #D2D2D2;
-    color: #232323;
 }
 
 .parte-menu-8 {
     color: #828282;
+}
+
+/* MENU DE NÍVEIS DEPARTAMENTOS  */
+
+.parte-menu a {
+    font-size: 14px;
+    line-height: 21px;
+}
+
+#elementos-gaveta-departamento-2,
+#elementos-gaveta-departamento-3,
+#elementos-gaveta-departamento-4,
+#elementos-gaveta-departamento-5,
+#elementos-gaveta-departamento-6,
+#elementos-gaveta-departamento-7 {
+    display: none;
+}
+
+#elementos-gaveta-departamento-2.ul-ativo,
+#elementos-gaveta-departamento-3.ul-ativo,
+#elementos-gaveta-departamento-4.ul-ativo,
+#elementos-gaveta-departamento-5.ul-ativo,
+#elementos-gaveta-departamento-6.ul-ativo,
+#elementos-gaveta-departamento-7.ul-ativo {
+    display: block;
+}
+
+#elementos-gaveta-departamento-2.ul-ativo li a,
+#elementos-gaveta-departamento-3.ul-ativo li a,
+#elementos-gaveta-departamento-4.ul-ativo li a,
+#elementos-gaveta-departamento-5.ul-ativo li a,
+#elementos-gaveta-departamento-6.ul-ativo li a,
+#elementos-gaveta-departamento-7.ul-ativo li a {
+    color: #232323;
+    font-size: 14px;
+}
+
+#link-gaveta-departamento-2.ativo #departamento-2.li-ativo,
+#link-gaveta-departamento-2.ativo #departamento-3.li-ativo,
+#link-gaveta-departamento-2.ativo #departamento-4.li-ativo,
+#link-gaveta-departamento-2.ativo #departamento-5.li-ativo,
+#link-gaveta-departamento-2.ativo #departamento-6.li-ativo,
+#link-gaveta-departamento-2.ativo #departamento-7.li-ativo {
+    background-color: #EEFF49;
+}
+
+
+.li-ativo {
+    background-color: #EEFF49;
+    transition: 0.4s;
+}
+
+.link-ativo {
+    text-decoration: underline;
+    color: #232323;
 }
 
 .logo {
@@ -163,6 +241,17 @@ html {
     flex-direction: row;
     align-items: center;
     gap: 13px;
+}
+
+.menu-pesquisa {
+    display: block;
+    position: absolute;
+    top: 64px;
+    right: 0;
+    width: 100%;
+    height: 64px;
+    background-color: #232323;
+
 }
 
 /* MAIN */
@@ -211,15 +300,15 @@ html {
 }
 
 .slider li:nth-child(1) label {
-    left: 10px;
+    left: 45%;
 }
 
 .slider li:nth-child(2) label {
-    left: 40px;
+    left: 50%;
 }
 
 .slider li:nth-child(3) label {
-    left: 70px;
+    left: 55%;
 }
 
 .slider img {

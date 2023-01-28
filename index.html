@@ -14,14 +14,14 @@
 
 <body>
     <!-- NAV BAR -->
-    <header class="topo">
+    <header id="topo" class="topo">
         <nav class="menu">
             <!-- MENU LATERAL -->
             <div class="hamburguer">
-                <img src="img/icon-header-menu.svg" id="btnAbrirMenuLateral">
-                <div id="menuLateral" class="menuLateral effect" style="margin-left: -269px;">
+                <img src="img/icon-header-menu.svg" id="btn-abrir-menu-lateral">
+                <div id="menu-lateral" class="menu-lateral effect" style="margin-left: -269px;">
                     <div class="parte-menu-1">
-                        <button class="btnFechar" id="btnFecharMenuLateral">X</button>
+                        <button class="btn-fechar" id="btn-fechar-menu-lateral">X</button>
                         <div class="usuarioMenu">
                             <div class="fotoUsuario">
                                 <div class="quadrado1"></div>
@@ -29,43 +29,76 @@
                             </div>
                             <div class="nomeUsuario">
                                 <p class="saudacao">Olá,</p>
-                                <p class="nomeDestaque">Usuário</p>
+                                <p class="nome-destaque">Usuário</p>
                             </div>
                         </div>
                     </div>
                     <ul>
-                        <li class="parte-menu-2">
-                            <p>Departamento 1</p>
+                        <li id="departamento-2" class="parte-menu parte-menu-2">
+                            <a id="link-gaveta-departamento-2" href="#menu-lateral">Departamento 1</a>
+                            <ul id="elementos-gaveta-departamento-2">
+                                <li><a>Categoria 1</a></li>
+                                <li><a>Categoria 2</a></li>
+                                <li><a>Categoria 3</a></li>
+                            </ul>
                         </li>
-                        <li class="parte-menu-3">
-                            <p>Departamento 2</p>
+                        <li id="departamento-3" class="parte-menu parte-menu-3">
+                            <a id="link-gaveta-departamento-3" href="#menu-lateral">Departamento 2</a>
+                            <ul id="elementos-gaveta-departamento-3">
+                                <li><a>Categoria 1</a></li>
+                                <li><a>Categoria 2</a></li>
+                                <li><a>Categoria 3</a></li>
+                            </ul>
                         </li>
-                        <li class="parte-menu-4">
-                            <p>Departamento 3</p>
+                        <li id="departamento-4" class="parte-menu parte-menu-4">
+                            <a id="link-gaveta-departamento-4" href="#menu-lateral">Departamento 3</a>
+                            <ul id="elementos-gaveta-departamento-4">
+                                <li><a>Categoria 1</a></li>
+                                <li><a>Categoria 2</a></li>
+                                <li><a>Categoria 3</a></li>
+                            </ul>
                         </li>
-                        <li class="parte-menu-5">
-                            <p>Departamento 4</p>
+                        <li id="departamento-5" class="parte-menu parte-menu-5">
+                            <a id="link-gaveta-departamento-5" href="#menu-lateral">Departamento 4</a>
+                            <ul id="elementos-gaveta-departamento-5">
+                                <li><a>Categoria 1</a></li>
+                                <li><a>Categoria 2</a></li>
+                                <li><a>Categoria 3</a></li>
+                            </ul>
                         </li>
-                        <li class="parte-menu-6">
-                            <p>Departamento 5</p>
+                        <li id="departamento-6" class="parte-menu parte-menu-6">
+                            <a id="link-gaveta-departamento-6" href="#menu-lateral">Departamento 5</a>
+                            <ul id="elementos-gaveta-departamento-6">
+                                <li><a>Categoria 1</a></li>
+                                <li><a>Categoria 2</a></li>
+                                <li><a>Categoria 3</a></li>
+                            </ul>
                         </li>
-                        <li class="parte-menu-7">
-                            <p>Departamento 6</p>
+                        <li id="departamento-7" class="parte-menu parte-menu-7">
+                            <a id="link-gaveta-departamento-7" href="#menu-lateral">Departamento 6</a>
+                            <ul id="elementos-gaveta-departamento-7">
+                                <li><a>Categoria 1</a></li>
+                                <li><a>Categoria 2</a></li>
+                                <li><a>Categoria 3</a></li>
+                            </ul>
                         </li>
-                        <li class="parte-menu-8">
+                        <li class="parte-menu parte-menu-8">
                             <p>Sair</p>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="logo">
-                <a href="#home"><img src="img/logo-header-wecode.svg" alt="logo"></a>
+                <a href="#topo"><img src="img/logo-header-wecode.svg" alt="logo"></a>
             </div>
             <div class="pesquisar-carrinho">
                 <div class="pesquisa">
-                    <img src="img/icon-header-search.svg">
+                    <img src="img/icon-header-search.svg" id="btn-abrir-pesquisa">
+                    <div class="menu-pesquisa" class="menu-pesquisa effect">
+                        <input type="text" class="input-pesquisa" placeholder="O que você está procurando?">
+                    </div>
                 </div>
-                <div class="pesquisa">
+                <div class="carrinho">
                     <img src="img/icon-header-carrinho.svg">
                 </div>
             </div>
@@ -78,6 +111,7 @@
             <div class="show">
                 <ul class="slider">
                     <li>
+                        <label for="banner0"><img src="img/icon-home-arrow-left.svg" alt=""></label>
                         <input type="radio" id="banner1" name="banner" checked>
                         <label for="banner1"></label>
                         <img class="banner" src="img/Banner-home-principal-1.png">
@@ -323,24 +357,42 @@
             <div class="gavetas" id="gavetas">
                 <ul>
                     <li>
-                        <a id="link-gaveta-sobre-fechado" href="#redes-sociais"><p>Sobre nós</p><p>+</p></a>
-                        <a id="link-gaveta-sobre-aberto" href="#redes-sociais"><p class="texto-link-aberto">Sobre nós</p><p>-</p></a>
+                        <a id="link-gaveta-sobre-fechado" href="#redes-sociais">
+                            <p>Sobre nós</p>
+                            <p>+</p>
+                        </a>
+                        <a id="link-gaveta-sobre-aberto" href="#redes-sociais">
+                            <p class="texto-link-aberto">Sobre nós</p>
+                            <p>-</p>
+                        </a>
                         <ul id="elementos-gaveta-sobre">
                             <li><a href="#redes-sociais">Quem somos nós</a></li>
                             <li><a href="#redes-sociais">Nosso grupo</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a id="link-gaveta-conta-fechado" href="#redes-sociais"><p>Minha conta</p><p>+</p></a>
-                        <a id="link-gaveta-conta-aberto" href="#redes-sociais"><p class="texto-link-aberto">Minha conta</p><p>-</p></a>
+                        <a id="link-gaveta-conta-fechado" href="#redes-sociais">
+                            <p>Minha conta</p>
+                            <p>+</p>
+                        </a>
+                        <a id="link-gaveta-conta-aberto" href="#redes-sociais">
+                            <p class="texto-link-aberto">Minha conta</p>
+                            <p>-</p>
+                        </a>
                         <ul id="elementos-gaveta-conta">
                             <li><a href="#redes-sociais">Meu perfil</a></li>
                             <li><a href="#redes-sociais">Meus pedidos</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a id="link-gaveta-politicas-fechado" href="#redes-sociais"><p>Politicas</p><p>+</p></a>
-                        <a id="link-gaveta-politicas-aberto" href="#redes-sociais"><p class="texto-link-aberto">Politicas</p><p>-</p></a>
+                        <a id="link-gaveta-politicas-fechado" href="#redes-sociais">
+                            <p>Politicas</p>
+                            <p>+</p>
+                        </a>
+                        <a id="link-gaveta-politicas-aberto" href="#redes-sociais">
+                            <p class="texto-link-aberto">Politicas</p>
+                            <p>-</p>
+                        </a>
                         <ul id="elementos-gaveta-politicas">
                             <li><a href="#redes-sociais">Políticas de troca e devolução</a></li>
                             <li><a href="#redes-sociais">Políticas de Privacidade</a></li>
@@ -348,11 +400,21 @@
                         </ul>
                     </li>
                     <li>
-                        <a id="link-gaveta-contato-fechado" href="#redes-sociais"><p>Contato</p><p>+</p></a>
-                        <a id="link-gaveta-contato-aberto" href="#redes-sociais"><p class="texto-link-aberto">Contato</p><p>-</p></a>
+                        <a id="link-gaveta-contato-fechado" href="#redes-sociais">
+                            <p>Contato</p>
+                            <p>+</p>
+                        </a>
+                        <a id="link-gaveta-contato-aberto" href="#redes-sociais">
+                            <p class="texto-link-aberto">Contato</p>
+                            <p>-</p>
+                        </a>
                         <ul id="elementos-gaveta-contato">
-                            <li><p>Tel.: (54)3028-9452</p></li>
-                            <li><p>Rua Plácido de Castro, 1063 - Sala 403 - Exposição, Caxias do Sul - RS, 95084-370</p></li>
+                            <li>
+                                <p>Tel.: (54)3028-9452</p>
+                            </li>
+                            <li>
+                                <p>Rua Plácido de Castro, 1063 - Sala 403 - Exposição, Caxias do Sul - RS, 95084-370</p>
+                            </li>
                         </ul>
                     </li>
                 </ul>

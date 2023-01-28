@@ -1,25 +1,84 @@
 const menuTamanho = '269px'
 
-let abrir = true
+let abrirMenu = true
 
-document.querySelector('#btnAbrirMenuLateral').addEventListener('click', e => {
-    abrir = !abrir
+document.querySelector('#btn-abrir-menu-lateral').addEventListener('click', e => {
+    abrirMenu = !abrirMenu
     menuSwitch()
 })
 
-document.querySelector('#btnFecharMenuLateral').addEventListener('click', e => {
-    abrir = false
+document.querySelector('#btn-fechar-menu-lateral').addEventListener('click', e => {
+    abrirMenu = false
     menuSwitch()
 })
 
 function menuSwitch() {
-    if(abrir){
-        document.querySelector('#menuLateral').style.marginLeft = 0
+    if(abrirMenu){
+        document.querySelector('#menu-lateral').style.marginLeft = 0
         return
     } 
-    document.querySelector('#menuLateral').style.marginLeft = `-${menuTamanho}`;
+    document.querySelector('#menu-lateral').style.marginLeft = `-${menuTamanho}`
 }
 
+const linkGavetaDepartamento2 = document.getElementById('link-gaveta-departamento-2')
+const linkGavetaDepartamento3 = document.getElementById('link-gaveta-departamento-3')
+const linkGavetaDepartamento4 = document.getElementById('link-gaveta-departamento-4')
+const linkGavetaDepartamento5 = document.getElementById('link-gaveta-departamento-5')
+const linkGavetaDepartamento6 = document.getElementById('link-gaveta-departamento-6')
+const linkGavetaDepartamento7 = document.getElementById('link-gaveta-departamento-7')
+
+//uma função para cada?? :/
+function toggleGavetaDepartamento2(){
+    const ulGavetaDepartamento2 = document.getElementById('elementos-gaveta-departamento-2')
+    const liParteMenuDepartamento2 = document.getElementById('departamento-2')
+    ulGavetaDepartamento2.classList.toggle('ul-ativo')
+    liParteMenuDepartamento2.classList.toggle('li-ativo')
+    linkGavetaDepartamento2.classList.toggle('link-ativo')
+}
+function toggleGavetaDepartamento3(){
+    const ulGavetaDepartamento3 = document.getElementById('elementos-gaveta-departamento-3')
+    const liParteMenuDepartamento3 = document.getElementById('departamento-3')
+    ulGavetaDepartamento3.classList.toggle('ul-ativo')
+    liParteMenuDepartamento3.classList.toggle('li-ativo')
+    linkGavetaDepartamento3.classList.toggle('link-ativo')
+}
+function toggleGavetaDepartamento4(){
+    const ulGavetaDepartamento4 = document.getElementById('elementos-gaveta-departamento-4')
+    const liParteMenuDepartamento4 = document.getElementById('departamento-4')
+    ulGavetaDepartamento4.classList.toggle('ul-ativo')
+    liParteMenuDepartamento4.classList.toggle('li-ativo')
+    linkGavetaDepartamento4.classList.toggle('link-ativo')
+}
+function toggleGavetaDepartamento5(){
+    const ulGavetaDepartamento5 = document.getElementById('elementos-gaveta-departamento-5')
+    const liParteMenuDepartamento5 = document.getElementById('departamento-5')
+    ulGavetaDepartamento5.classList.toggle('ul-ativo')
+    liParteMenuDepartamento5.classList.toggle('li-ativo')
+    linkGavetaDepartamento5.classList.toggle('link-ativo')
+}
+function toggleGavetaDepartamento6(){
+    const ulGavetaDepartamento6 = document.getElementById('elementos-gaveta-departamento-6')
+    const liParteMenuDepartamento6 = document.getElementById('departamento-6')
+    ulGavetaDepartamento6.classList.toggle('ul-ativo')
+    liParteMenuDepartamento6.classList.toggle('li-ativo')
+    linkGavetaDepartamento6.classList.toggle('link-ativo')
+}
+function toggleGavetaDepartamento7(){
+    const ulGavetaDepartamento7 = document.getElementById('elementos-gaveta-departamento-7')
+    const liParteMenuDepartamento7 = document.getElementById('departamento-7')
+    ulGavetaDepartamento7.classList.toggle('ul-ativo')
+    liParteMenuDepartamento7.classList.toggle('li-ativo')
+    linkGavetaDepartamento7.classList.toggle('link-ativo')
+}
+
+linkGavetaDepartamento2.addEventListener('click', toggleGavetaDepartamento2)
+linkGavetaDepartamento3.addEventListener('click', toggleGavetaDepartamento3)
+linkGavetaDepartamento4.addEventListener('click', toggleGavetaDepartamento4)
+linkGavetaDepartamento5.addEventListener('click', toggleGavetaDepartamento5)
+linkGavetaDepartamento6.addEventListener('click', toggleGavetaDepartamento6)
+linkGavetaDepartamento7.addEventListener('click', toggleGavetaDepartamento7)
+
+//Menu de Níveis footer
 let elementosGavetaSobre = document.getElementById('elementos-gaveta-sobre')
 let linkGavetaSobreFechado = document.getElementById('link-gaveta-sobre-fechado')
 let linkGavetaSobreAberto = document.getElementById('link-gaveta-sobre-aberto')
