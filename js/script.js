@@ -20,6 +20,26 @@ function menuSwitch() {
     document.querySelector('#menu-lateral').style.marginLeft = `-${menuTamanho}`
 }
 
+let abrirMenuPesquisa = true
+
+document.querySelector('#btn-abrir-menu-pesquisa').addEventListener('click', e => {
+    abrirMenuPesquisa = !abrirMenuPesquisa
+    menuPesquisaSwitch()
+})
+
+document.querySelector('#btn-fechar-menu-pesquisa').addEventListener('click', e => {
+    abrirMenuPesquisa = false
+    menuPesquisaSwitch()
+})
+
+function menuPesquisaSwitch() {
+    if(abrirMenuPesquisa){
+        document.querySelector('#menu-pesquisa').style.display = 'block'
+        return
+    } 
+    document.querySelector('#menu-pesquisa').style.display = 'none'
+}
+
 const linkGavetaDepartamento2 = document.getElementById('link-gaveta-departamento-2')
 const linkGavetaDepartamento3 = document.getElementById('link-gaveta-departamento-3')
 const linkGavetaDepartamento4 = document.getElementById('link-gaveta-departamento-4')

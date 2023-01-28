@@ -244,14 +244,36 @@ a {
 }
 
 .menu-pesquisa {
-    display: block;
+    display: none;
     position: absolute;
     top: 64px;
     right: 0;
-    width: 100%;
+    width: 375px;
     height: 64px;
     background-color: #232323;
+    padding: 16px;
+    
+}
 
+.menu-pesquisa input {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    padding: 6px;
+}
+
+.menu-pesquisa.menu-pesquisa-ativo {
+    display: block;
+    transition: 0.4s;
+}
+
+.btn-fechar-pesquisa {
+    position: absolute;
+    right: 30px;
+    top: 25px;
+    font-size: 10px;
+    background-color: #FFFFFF;
+    color: #828282;
 }
 
 /* MAIN */
