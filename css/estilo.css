@@ -14,10 +14,13 @@ html {
     scroll-behavior: smooth;
 }
 
+main {
+    max-width: 1024px;
+}
+
 a {
     color: #FFFFFF;
 }
-
 
 .menu {
     position: fixed;
@@ -276,12 +279,6 @@ a {
     color: #828282;
 }
 
-/* MAIN */
-
-.principal {
-    padding-top: 68px;
-}
-
 /* BANNER HOME PRINCIPAL */
 
 .slider {
@@ -363,13 +360,10 @@ a {
     margin-top: 32px;
 }
 
-
-.legenda-departamento,
-.texto-banner-central {
+.legenda-departamento {
     line-height: 0;
     position: relative;
     color: #FFFFFF;
-
 }
 
 .legenda-departamento {
@@ -396,7 +390,7 @@ a {
 }
 
 .slider-produto::-webkit-scrollbar,
-.slider-footer-topo::-webkit-scrollbar {
+.slider-footer-topo::-webkit-scrollbar, .menu-lateral::-webkit-scrollbar {
     display: none;
 }
 
@@ -487,17 +481,29 @@ a {
     gap: 0;
 }
 
-.banner-central img {
-    min-height: 320px;
-    max-width: max-content;
+.banner-central-group-1, .banner-central-group-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 16px;
+    width: 375px;
+    height: 320px;
+    background-repeat: no-repeat;
 }
 
-.texto-banner-central {
-    bottom: 147px;
+.banner-central-group-1 {
+    background-image: url('../img/Banner-home-corpo-1.png');
+
+}
+
+.banner-central-group-2 {
+    background-image: url('../img/Banner-home-corpo-2.png');
+}
+
+.texto-banner-central {    
     font-size: 18px;
-    text-align: right;
-    right: 16px;
-    text-decoration: underline;
+    text-decoration: underline;    
 }
 
 /* FOOTER */
@@ -695,4 +701,7 @@ a {
     background-color: #142032;
     height: 42px;
     justify-content: center;
+}
+
+@media screen and (min-width: 800px){
 }
