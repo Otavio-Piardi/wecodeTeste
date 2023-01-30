@@ -18,6 +18,12 @@ a {
     color: #FFFFFF;
 }
 
+button:focus,
+input:focus,
+a:focus {
+    outline: 0;
+}
+
 .menu {
     position: fixed;
     display: flex;
@@ -43,7 +49,7 @@ a {
     background-color: #c7c7c7;
 }
 
-.usuarioMenu {
+.usuario-menu {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -51,23 +57,23 @@ a {
     gap: 15px;
 }
 
-.fotoUsuario {
+.foto-usuario {
     padding-left: 2px;
 }
 
-.quadrado1,
-.quadrado2 {
+.quadrado-1,
+.quadrado-2 {
     width: 68px;
     height: 68px;
     border-radius: 8px;
 }
 
-.quadrado1 {
+.quadrado-1 {
     background-color: #B3B3B3;
     position: relative;
 }
 
-.quadrado2 {
+.quadrado-2 {
     border: 1px solid #EEFF49;
     position: absolute;
     top: 75px;
@@ -285,7 +291,8 @@ a {
     padding-top: 63px;
 }
 
-.slider-topo-radio-group, .slider-footer-radio-group {
+.slider-topo-radio-group,
+.slider-footer-radio-group {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -299,7 +306,8 @@ a {
     gap: 8px;
 }
 
-.slider-topo-radio-group label, .slider-footer-radio-group label {
+.slider-topo-radio-group label,
+.slider-footer-radio-group label {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -316,18 +324,19 @@ a {
     display: block;
 }
 
-.banner-slider-topo-radio, .banner-slider-footer-radio {
+.banner-slider-topo-radio,
+.banner-slider-footer-radio {
     position: absolute;
     opacity: 0;
     height: 0;
     width: 0;
 }
 
-input[type = "radio"] + label .radio-btn {
+input[type="radio"]+label .radio-btn {
     background: radial-gradient(circle, #d9d9d966 100%, transparent 0%);
 }
 
-input[type = "radio"]:checked + label .radio-btn {
+input[type="radio"]:checked+label .radio-btn {
     background: radial-gradient(circle, #eaeaeae6 100%, transparent 0);
 }
 
@@ -335,6 +344,12 @@ input[type = "radio"]:checked + label .radio-btn {
 
 .departamento {
     max-height: 163px;
+}
+
+.departamento:hover,
+.produto:hover {
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
 }
 
 .grupo-departamentos {
@@ -361,7 +376,7 @@ input[type = "radio"]:checked + label .radio-btn {
 /* PRODUTOS VIEW */
 
 .produtos-view {
-    margin-bottom: 30px;
+    padding-bottom: 30px;
     margin-top: 32px;
 }
 
@@ -449,6 +464,16 @@ input[type = "radio"]:checked + label .radio-btn {
     padding: 2px 8px;
 }
 
+.produto-lancamento:hover {
+    box-shadow: 0 4px 15px 0 rgba(100, 100, 100, 0.8), 0 6px 20px 0 rgba(100, 100, 100, 0.3);
+    transition: 0.3s;
+}
+
+.produto-carrinho-add:hover {
+    box-shadow: 0 4px 15px 0 rgba(100, 100, 100, 0.8), 0 6px 20px 0 rgba(100, 100, 100, 0.3);
+    transition: 0.3s;
+}
+
 .cafe-medio {
     background-image: url('../img/Imagem-home-produto-1.png');
 }
@@ -476,9 +501,10 @@ input[type = "radio"]:checked + label .radio-btn {
     align-items: flex-end;
     justify-content: center;
     padding: 16px;
-    width: 375px;
+    width: 100% auto;
     height: 320px;
     background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .banner-central-group-1 {
@@ -546,11 +572,11 @@ input[type = "radio"]:checked + label .radio-btn {
     display: block;
 }
 
-input[type = "radio"] + label .radio-btn-footer {
+input[type="radio"]+label .radio-btn-footer {
     background: radial-gradient(circle, #E2E2E2 100%, transparent 0%);
 }
 
-input[type = "radio"]:checked + label .radio-btn-footer {
+input[type="radio"]:checked+label .radio-btn-footer {
     background: radial-gradient(circle, #8A8A8A 100%, transparent 0);
 }
 
@@ -598,6 +624,11 @@ input[type = "radio"]:checked + label .radio-btn-footer {
     padding: 13px;
 }
 
+.enviar-email input:focus {
+    border: 4px solid #EEFF49;
+    transition: border 0.3s;
+}
+
 .enviar-email input::-webkit-input-placeholder {
     color: #B7B7B7;
     font-size: 14px;
@@ -610,6 +641,11 @@ input[type = "radio"]:checked + label .radio-btn-footer {
     padding: 12px 34px;
 }
 
+.enviar-email button:hover {
+    box-shadow: 0 4px 15px 0 rgba(167, 167, 167, 0.2), 0 6px 20px 0 rgba(167, 167, 167, 0.1);
+    transition: 0.3s;
+}
+
 .icones-redes {
     margin-top: 22px;
     display: flex;
@@ -618,6 +654,11 @@ input[type = "radio"]:checked + label .radio-btn-footer {
 
 .icone-rede-social {
     width: 24px;
+}
+
+.icone-rede-social:hover {
+    box-shadow: 0 4px 15px 0 rgba(95, 95, 95, 0.5), 0 6px 20px 0 rgba(95, 95, 95, 0.4);
+    transition: 0.3s;
 }
 
 /* MENU DE NÍVEIS FOOTER */
@@ -683,5 +724,3 @@ input[type = "radio"]:checked + label .radio-btn-footer {
     height: 42px;
     justify-content: center;
 }
-
-@media screen and (min-width: 800px) {}
