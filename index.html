@@ -109,27 +109,36 @@
     <main class="principal">
         <!-- BANNER INICIO -->
         <section id="home" class="banner-home-principal">
-            <div class="show">
-                <ul class="slider">
-                    <li>
-                        <label for="banner0"><img src="img/icon-home-arrow-left.svg" alt=""></label>
-                        <input type="radio" id="banner1" name="banner" checked>
-                        <label for="banner1"></label>
-                        <img class="banner" src="img/Banner-home-principal-1.png">
-                    </li>
-                    <li>
-                        <input type="radio" id="banner2" name="banner">
-                        <label for="banner2"></label>
-                        <img class="banner" src="img/Banner-home-principal-2.png">
-                    </li>
-                    <li>
-                        <input type="radio" id="banner3" name="banner">
-                        <label for="banner3"></label>
-                        <img class="banner" src="img/Banner-home-principal-3.png">
-                    </li>
-                </ul>
+            <div class="slider-topo">
+                <div class="banner-slider" id="banner1">
+                    <img class="banner" src="img/Banner-home-principal-1.png">
+                </div>
+                <div class="banner-slider" id="banner2">
+                    <img class="banner" src="img/Banner-home-principal-2.png">
+                </div>
+                <div class="banner-slider" id="banner3">
+                    <img class="banner" src="img/Banner-home-principal-3.png">
+                </div>
             </div>
-
+            <div class="slider-topo-radio-group">
+                <img src="img/icon-home-arrow-left.svg">
+                <input type="radio" name="banner-slider-topo-radio" class="banner-slider-topo-radio" checked="checked">
+                <label for="banner1">
+                    <div class="radio-btn"></div>
+                    <span></span>
+                </label>
+                <input type="radio" name="banner-slider-topo-radio" class="banner-slider-topo-radio">
+                <label for="banner2">
+                    <div class="radio-btn"></div>
+                    <span></span>
+                </label>
+                <input type="radio" name="banner-slider-topo-radio" class="banner-slider-topo-radio">
+                <label for="banner3">
+                    <div class="radio-btn"></div>
+                    <span></span>
+                </label>
+                <img src="img/icon-home-arrow-right.svg" alt="">
+            </div>
         </section>
         <!-- DEPARTAMENTOS -->
         <section id="departamentos" class="home-departamentos">
@@ -261,7 +270,7 @@
         <section>
             <div class="banner-central">
                 <div class="banner-central-group-1">
-                    <a class="texto-banner-central">Saiba Mais!</p>
+                    <a class="texto-banner-central">Saiba Mais!</a>
                 </div>
             </div>
         </section>
@@ -334,9 +343,17 @@
                     </div>
                 </div>
             </div>
-            <div class="slide-footer-label-group">
-                <label class="slide-footer-label-bola" for="slide-footer-1"></label>
-                <label class="slide-footer-label-bola" for="slide-footer-2"></label>
+            <div class="slider-footer-radio-group">
+                <input type="radio" name="banner-slider-footer-radio" class="banner-slider-footer-radio" checked="checked">
+                <label for="slide-footer-1">
+                    <div class="radio-btn-footer"></div>
+                    <span></span>
+                </label>
+                <input type="radio" name="banner-slider-footer-radio" class="banner-slider-footer-radio">
+                <label for="slide-footer-2">
+                    <div class="radio-btn-footer"></div>
+                    <span></span>
+                </label>
             </div>
         </div>
         <section class="principal-footer">
@@ -361,13 +378,9 @@
             <div class="gavetas" id="gavetas">
                 <ul>
                     <li>
-                        <a id="link-gaveta-sobre-fechado" href="#redes-sociais">
+                        <a id="link-gaveta-sobre" href="#redes-sociais">
                             <p>Sobre nós</p>
-                            <p>+</p>
-                        </a>
-                        <a id="link-gaveta-sobre-aberto" href="#redes-sociais">
-                            <p class="texto-link-aberto">Sobre nós</p>
-                            <p>-</p>
+                            <p id="p-mais-menos-sobre">+</p>
                         </a>
                         <ul id="elementos-gaveta-sobre">
                             <li><a href="#redes-sociais">Quem somos nós</a></li>
@@ -375,13 +388,9 @@
                         </ul>
                     </li>
                     <li>
-                        <a id="link-gaveta-conta-fechado" href="#redes-sociais">
+                        <a id="link-gaveta-conta" href="#redes-sociais">
                             <p>Minha conta</p>
-                            <p>+</p>
-                        </a>
-                        <a id="link-gaveta-conta-aberto" href="#redes-sociais">
-                            <p class="texto-link-aberto">Minha conta</p>
-                            <p>-</p>
+                            <p id="p-mais-menos-conta">+</p>
                         </a>
                         <ul id="elementos-gaveta-conta">
                             <li><a href="#redes-sociais">Meu perfil</a></li>
@@ -389,13 +398,9 @@
                         </ul>
                     </li>
                     <li>
-                        <a id="link-gaveta-politicas-fechado" href="#redes-sociais">
+                        <a id="link-gaveta-politicas" href="#redes-sociais">
                             <p>Politicas</p>
-                            <p>+</p>
-                        </a>
-                        <a id="link-gaveta-politicas-aberto" href="#redes-sociais">
-                            <p class="texto-link-aberto">Politicas</p>
-                            <p>-</p>
+                            <p id="p-mais-menos-politicas">+</p>
                         </a>
                         <ul id="elementos-gaveta-politicas">
                             <li><a href="#redes-sociais">Políticas de troca e devolução</a></li>
@@ -404,13 +409,9 @@
                         </ul>
                     </li>
                     <li>
-                        <a id="link-gaveta-contato-fechado" href="#redes-sociais">
+                        <a id="link-gaveta-contato" href="#redes-sociais">
                             <p>Contato</p>
-                            <p>+</p>
-                        </a>
-                        <a id="link-gaveta-contato-aberto" href="#redes-sociais">
-                            <p class="texto-link-aberto">Contato</p>
-                            <p>-</p>
+                            <p id="p-mais-menos-contato">+</p>
                         </a>
                         <ul id="elementos-gaveta-contato">
                             <li>

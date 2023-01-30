@@ -55,6 +55,7 @@ function toggleGavetaDepartamento2(){
     liParteMenuDepartamento2.classList.toggle('li-ativo')
     linkGavetaDepartamento2.classList.toggle('link-ativo')
 }
+
 function toggleGavetaDepartamento3(){
     const ulGavetaDepartamento3 = document.getElementById('elementos-gaveta-departamento-3')
     const liParteMenuDepartamento3 = document.getElementById('departamento-3')
@@ -69,6 +70,7 @@ function toggleGavetaDepartamento4(){
     liParteMenuDepartamento4.classList.toggle('li-ativo')
     linkGavetaDepartamento4.classList.toggle('link-ativo')
 }
+
 function toggleGavetaDepartamento5(){
     const ulGavetaDepartamento5 = document.getElementById('elementos-gaveta-departamento-5')
     const liParteMenuDepartamento5 = document.getElementById('departamento-5')
@@ -76,6 +78,7 @@ function toggleGavetaDepartamento5(){
     liParteMenuDepartamento5.classList.toggle('li-ativo')
     linkGavetaDepartamento5.classList.toggle('link-ativo')
 }
+
 function toggleGavetaDepartamento6(){
     const ulGavetaDepartamento6 = document.getElementById('elementos-gaveta-departamento-6')
     const liParteMenuDepartamento6 = document.getElementById('departamento-6')
@@ -83,6 +86,7 @@ function toggleGavetaDepartamento6(){
     liParteMenuDepartamento6.classList.toggle('li-ativo')
     linkGavetaDepartamento6.classList.toggle('link-ativo')
 }
+
 function toggleGavetaDepartamento7(){
     const ulGavetaDepartamento7 = document.getElementById('elementos-gaveta-departamento-7')
     const liParteMenuDepartamento7 = document.getElementById('departamento-7')
@@ -99,82 +103,56 @@ linkGavetaDepartamento6.addEventListener('click', toggleGavetaDepartamento6)
 linkGavetaDepartamento7.addEventListener('click', toggleGavetaDepartamento7)
 
 //Menu de Níveis footer
-let elementosGavetaSobre = document.getElementById('elementos-gaveta-sobre')
-let linkGavetaSobreFechado = document.getElementById('link-gaveta-sobre-fechado')
-let linkGavetaSobreAberto = document.getElementById('link-gaveta-sobre-aberto')
+const linkGavetaSobre = document.getElementById('link-gaveta-sobre')
+const linkGavetaConta = document.getElementById('link-gaveta-conta')
+const linkGavetaPoliticas = document.getElementById('link-gaveta-politicas')
+const linkGavetaContato = document.getElementById('link-gaveta-contato')
 
-let elementosGavetaConta = document.getElementById('elementos-gaveta-conta')
-let linkGavetaContaFechado = document.getElementById('link-gaveta-conta-fechado')
-let linkGavetaContaAberto = document.getElementById('link-gaveta-conta-aberto')
+function toggleGavetaSobre(){
+    const ulGavetaSobre = document.getElementById('elementos-gaveta-sobre')
+    const pGavetaSobre = document.getElementById('p-mais-menos-sobre')
+    pGavetaSobre.innerHTML = "-"
+    ulGavetaSobre.classList.toggle('ul-ativo')
+    linkGavetaSobre.classList.toggle('link-ativo-footer')
+    if((pGavetaSobre.innerHTML = "+") && ulGavetaSobre.classList.contains('ul-ativo')) {
+        pGavetaSobre.innerHTML = "-"
+    }
+}
 
-let elementosGavetaPoliticas = document.getElementById('elementos-gaveta-politicas')
-let linkGavetaPoliticasFechado = document.getElementById('link-gaveta-politicas-fechado')
-let linkGavetaPoliticasAberto = document.getElementById('link-gaveta-politicas-aberto')
+function toggleGavetaConta(){
+    const ulGavetaConta = document.getElementById('elementos-gaveta-conta')
+    const pGavetaConta = document.getElementById('p-mais-menos-conta')
+    pGavetaConta.innerHTML = "-"
+    ulGavetaConta.classList.toggle('ul-ativo')
+    linkGavetaConta.classList.toggle('link-ativo-footer')
+    if((pGavetaConta.innerHTML = "+") && ulGavetaConta.classList.contains('ul-ativo')) {
+        pGavetaConta.innerHTML = "-"
+    }
+}
 
-let elementosGavetaContato = document.getElementById('elementos-gaveta-contato')
-let linkGavetaContatoFechado = document.getElementById('link-gaveta-contato-fechado')
-let linkGavetaContatoAberto = document.getElementById('link-gaveta-contato-aberto')
+function toggleGavetaPoliticas(){
+    const ulGavetaPoliticas = document.getElementById('elementos-gaveta-politicas')
+    const pGavetaPoliticas = document.getElementById('p-mais-menos-politicas')
+    pGavetaPoliticas.innerHTML = "-"
+    ulGavetaPoliticas.classList.toggle('ul-ativo')
+    linkGavetaPoliticas.classList.toggle('link-ativo-footer')
+    if((pGavetaPoliticas.innerHTML = "+") && ulGavetaPoliticas.classList.contains('ul-ativo')) {
+        pGavetaPoliticas.innerHTML = "-"
+    }
+}
 
-elementosGavetaSobre.classList.add('invisivel')
-linkGavetaSobreFechado.classList.add('visivel-link')
-linkGavetaSobreAberto.classList.add('invisivel')
+function toggleGavetaContato(){
+    const ulGavetaContato = document.getElementById('elementos-gaveta-contato')
+    const pGavetaContato = document.getElementById('p-mais-menos-contato')
+    pGavetaContato.innerHTML = "-"
+    ulGavetaContato.classList.toggle('ul-ativo')
+    linkGavetaContato.classList.toggle('link-ativo-footer')
+    if((pGavetaContato.innerHTML = "+") && ulGavetaContato.classList.contains('ul-ativo')) {
+        pGavetaContato.innerHTML = "-"
+    }
+}
 
-elementosGavetaConta.classList.add('invisivel')
-linkGavetaContaFechado.classList.add('visivel-link')
-linkGavetaContaAberto.classList.add('invisivel')
-
-elementosGavetaPoliticas.classList.add('invisivel')
-linkGavetaPoliticasFechado.classList.add('visivel-link')
-linkGavetaPoliticasAberto.classList.add('invisivel')
-
-elementosGavetaContato.classList.add('invisivel')
-linkGavetaContatoFechado.classList.add('visivel-link')
-linkGavetaContatoAberto.classList.add('invisivel')
-
-linkGavetaSobreFechado.addEventListener('click', e => {
-    elementosGavetaSobre.classList.replace('invisivel', 'visivel-ul')
-    linkGavetaSobreFechado.classList.replace('visivel-link', 'invisivel')
-    linkGavetaSobreAberto.classList.replace('invisivel', 'visivel-link')
-})
-
-linkGavetaSobreAberto.addEventListener('click', e => {
-    elementosGavetaSobre.classList.replace('visivel-ul', 'invisivel')
-    linkGavetaSobreFechado.classList.replace('invisivel', 'visivel-link')
-    linkGavetaSobreAberto.classList.replace('visivel-link', 'invisivel')
-})
-
-linkGavetaContaFechado.addEventListener('click', e => {
-    elementosGavetaConta.classList.replace('invisivel', 'visivel-ul')
-    linkGavetaContaFechado.classList.replace('visivel-link', 'invisivel')
-    linkGavetaContaAberto.classList.replace('invisivel', 'visivel-link')
-})
-
-linkGavetaContaAberto.addEventListener('click', e => {
-    elementosGavetaConta.classList.replace('visivel-ul', 'invisivel')
-    linkGavetaContaFechado.classList.replace('invisivel', 'visivel-link')
-    linkGavetaContaAberto.classList.replace('visivel-link', 'invisivel')
-})
-
-linkGavetaPoliticasFechado.addEventListener('click', e => {
-    elementosGavetaPoliticas.classList.replace('invisivel', 'visivel-ul')
-    linkGavetaPoliticasFechado.classList.replace('visivel-link', 'invisivel')
-    linkGavetaPoliticasAberto.classList.replace('invisivel', 'visivel-link')
-})
-
-linkGavetaPoliticasAberto.addEventListener('click', e => {
-    elementosGavetaPoliticas.classList.replace('visivel-ul', 'invisivel')
-    linkGavetaPoliticasFechado.classList.replace('invisivel', 'visivel-link')
-    linkGavetaPoliticasAberto.classList.replace('visivel-link', 'invisivel')
-})
-
-linkGavetaContatoFechado.addEventListener('click', e => {
-    elementosGavetaContato.classList.replace('invisivel', 'visivel-ul')
-    linkGavetaContatoFechado.classList.replace('visivel-link', 'invisivel')
-    linkGavetaContatoAberto.classList.replace('invisivel', 'visivel-link')
-})
-
-linkGavetaContatoAberto.addEventListener('click', e => {
-    elementosGavetaContato.classList.replace('visivel-ul', 'invisivel')
-    linkGavetaContatoFechado.classList.replace('invisivel', 'visivel-link')
-    linkGavetaContatoAberto.classList.replace('visivel-link', 'invisivel')
-})
+linkGavetaSobre.addEventListener('click', toggleGavetaSobre)
+linkGavetaConta.addEventListener('click', toggleGavetaConta)
+linkGavetaPoliticas.addEventListener('click', toggleGavetaPoliticas)
+linkGavetaContato.addEventListener('click', toggleGavetaContato)
