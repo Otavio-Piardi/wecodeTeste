@@ -34,49 +34,49 @@
                         </div>
                     </div>
                     <ul>
-                        <li id="departamento-2" class="parte-menu parte-menu-2">
-                            <a id="link-gaveta-departamento-2" href="#menu-lateral">Departamento 1</a>
-                            <ul id="elementos-gaveta-departamento-2">
+                        <li class="parte-menu parte-menu-2">
+                            <a class="link-gaveta-departamento" href="#menu-lateral">Departamento 1</a>
+                            <ul class="elemento-gaveta">
                                 <li><a>Categoria 1</a></li>
                                 <li><a>Categoria 2</a></li>
                                 <li><a>Categoria 3</a></li>
                             </ul>
                         </li>
-                        <li id="departamento-3" class="parte-menu parte-menu-3">
-                            <a id="link-gaveta-departamento-3" href="#menu-lateral">Departamento 2</a>
-                            <ul id="elementos-gaveta-departamento-3">
+                        <li class="parte-menu parte-menu-3">
+                            <a class="link-gaveta-departamento" href="#menu-lateral">Departamento 2</a>
+                            <ul class="elemento-gaveta">
                                 <li><a>Categoria 1</a></li>
                                 <li><a>Categoria 2</a></li>
                                 <li><a>Categoria 3</a></li>
                             </ul>
                         </li>
-                        <li id="departamento-4" class="parte-menu parte-menu-4">
-                            <a id="link-gaveta-departamento-4" href="#menu-lateral">Departamento 3</a>
-                            <ul id="elementos-gaveta-departamento-4">
+                        <li class="parte-menu parte-menu-4">
+                            <a class="link-gaveta-departamento" href="#menu-lateral">Departamento 3</a>
+                            <ul class="elemento-gaveta">
                                 <li><a>Categoria 1</a></li>
                                 <li><a>Categoria 2</a></li>
                                 <li><a>Categoria 3</a></li>
                             </ul>
                         </li>
-                        <li id="departamento-5" class="parte-menu parte-menu-5">
-                            <a id="link-gaveta-departamento-5" href="#menu-lateral">Departamento 4</a>
-                            <ul id="elementos-gaveta-departamento-5">
+                        <li class="parte-menu parte-menu-5">
+                            <a class="link-gaveta-departamento" href="#menu-lateral">Departamento 4</a>
+                            <ul class="elemento-gaveta">
                                 <li><a>Categoria 1</a></li>
                                 <li><a>Categoria 2</a></li>
                                 <li><a>Categoria 3</a></li>
                             </ul>
                         </li>
-                        <li id="departamento-6" class="parte-menu parte-menu-6">
-                            <a id="link-gaveta-departamento-6" href="#menu-lateral">Departamento 5</a>
-                            <ul id="elementos-gaveta-departamento-6">
+                        <li class="parte-menu parte-menu-6">
+                            <a class="link-gaveta-departamento" href="#menu-lateral">Departamento 5</a>
+                            <ul class="elemento-gaveta">
                                 <li><a>Categoria 1</a></li>
                                 <li><a>Categoria 2</a></li>
                                 <li><a>Categoria 3</a></li>
                             </ul>
                         </li>
-                        <li id="departamento-7" class="parte-menu parte-menu-7">
-                            <a id="link-gaveta-departamento-7" href="#menu-lateral">Departamento 6</a>
-                            <ul id="elementos-gaveta-departamento-7">
+                        <li class="parte-menu parte-menu-7">
+                            <a class="link-gaveta-departamento" href="#menu-lateral">Departamento 6</a>
+                            <ul class="elemento-gaveta">
                                 <li><a>Categoria 1</a></li>
                                 <li><a>Categoria 2</a></li>
                                 <li><a>Categoria 3</a></li>
@@ -360,11 +360,25 @@
         <section class="principal-footer">
             <img class="logo-wecode-footer" src="img/icon-footer-logotype.svg" alt="logotipo wecode">
             <div class="newsletter">
-                <h2 class="titulo-footer">Newsletter</h2>
-                <p class="footer-newsletter-text">Receba novidades e ofertas através da nossa newsletter</p>
-                <div class="enviar-email">
-                    <input type="email" placeholder="Digite seu e-mail">
-                    <button><img class="botao-email-footer" src="img/icon-footer-mail.svg"></button>
+                <form method="post" action="index.html">
+                    <fieldset>
+                        <legend class="titulo-footer">Newsletter</legend>
+                        <p class="footer-newsletter-text">Receba novidades e ofertas através da nossa newsletter
+                        </p>
+                        <div class="enviar-email">
+                            <input id="nomeNewsletter" type="text" name="nome" placeholder="Digite seu nome" >
+                            <input id="telNewsletter" type="tel" name="telefone" placeholder="Digite seu telefone">
+                            <input id="emailNewsletter" type="email" name="email" placeholder="Digite seu e-mail">
+                            <button type="button" id="btnEnviarNewsletter"><img class="botao-email-footer" src="img/icon-footer-mail.svg"></button>
+                        </div>
+                    </fieldset>
+                </form>
+
+                <div id="resultadoNewsletter" class="resultado-newsletter">
+                    <p id="mensagemNewsletterResultado"></p>
+                    <p id="nomeNewsletterResultado"></p>
+                    <p id="telNewsletterResultado"></p>
+                    <p id="emailNewsletterResultado"></p>
                 </div>
             </div>
             <div class="redes-sociais">
@@ -383,7 +397,7 @@
                             <p>Sobre nós</p>
                             <p id="p-mais-menos-sobre">+</p>
                         </a>
-                        <ul id="elementos-gaveta-sobre">
+                        <ul class="elementos-gaveta">
                             <li><a href="#redes-sociais">Quem somos nós</a></li>
                             <li><a href="#redes-sociais">Nosso grupo</a></li>
                         </ul>
@@ -393,7 +407,7 @@
                             <p>Minha conta</p>
                             <p id="p-mais-menos-conta">+</p>
                         </a>
-                        <ul id="elementos-gaveta-conta">
+                        <ul class="elementos-gaveta">
                             <li><a href="#redes-sociais">Meu perfil</a></li>
                             <li><a href="#redes-sociais">Meus pedidos</a></li>
                         </ul>
@@ -403,7 +417,7 @@
                             <p>Politicas</p>
                             <p id="p-mais-menos-politicas">+</p>
                         </a>
-                        <ul id="elementos-gaveta-politicas">
+                        <ul class="elementos-gaveta">
                             <li><a href="#redes-sociais">Políticas de troca e devolução</a></li>
                             <li><a href="#redes-sociais">Políticas de Privacidade</a></li>
                             <li><a href="#redes-sociais">Termos de Uso</a></li>
@@ -414,7 +428,7 @@
                             <p>Contato</p>
                             <p id="p-mais-menos-contato">+</p>
                         </a>
-                        <ul id="elementos-gaveta-contato">
+                        <ul class="elementos-gaveta">
                             <li>
                                 <p>Tel.: (54)3028-9452</p>
                             </li>
@@ -440,6 +454,7 @@
             <img src="img/icon-footer-vtexbywecode.svg" alt="vtex by wecode">
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
     <script src="js/script.js"></script>
 </body>
 

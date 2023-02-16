@@ -189,51 +189,26 @@ a:focus {
     line-height: 21px;
 }
 
-#elementos-gaveta-departamento-2,
-#elementos-gaveta-departamento-3,
-#elementos-gaveta-departamento-4,
-#elementos-gaveta-departamento-5,
-#elementos-gaveta-departamento-6,
-#elementos-gaveta-departamento-7,
-#elementos-gaveta-sobre,
-#elementos-gaveta-conta,
-#elementos-gaveta-politicas,
-#elementos-gaveta-contato {
+.elementos-gaveta {
     display: none;
 }
 
-#elementos-gaveta-departamento-2.ul-ativo,
-#elementos-gaveta-departamento-3.ul-ativo,
-#elementos-gaveta-departamento-4.ul-ativo,
-#elementos-gaveta-departamento-5.ul-ativo,
-#elementos-gaveta-departamento-6.ul-ativo,
-#elementos-gaveta-departamento-7.ul-ativo,
-#elementos-gaveta-sobre.ul-ativo,
-#elementos-gaveta-conta.ul-ativo,
-#elementos-gaveta-contato.ul-ativo,
-#elementos-gaveta-politicas.ul-ativo {
-    display: block;
-}
-
-#elementos-gaveta-departamento-2.ul-ativo li a,
-#elementos-gaveta-departamento-3.ul-ativo li a,
-#elementos-gaveta-departamento-4.ul-ativo li a,
-#elementos-gaveta-departamento-5.ul-ativo li a,
-#elementos-gaveta-departamento-6.ul-ativo li a,
-#elementos-gaveta-departamento-7.ul-ativo li a {
+.elemento-gaveta-departamento.ul-ativo li a {
     color: #232323;
     font-size: 14px;
 }
 
-.li-ativo {
+.parte-menu-ativo {
     background-color: #EEFF49;
-    transition: 0.4s;
+    transition: 0.5s;
 }
 
 .link-ativo {
     text-decoration: underline;
     color: #232323;
 }
+
+/* --------------------------- */
 
 .logo {
     padding-left: 40px;
@@ -612,7 +587,7 @@ input[type="radio"]:checked+label .radio-btn-footer {
 
 .enviar-email {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     gap: 8px;
@@ -645,6 +620,15 @@ input[type="radio"]:checked+label .radio-btn-footer {
     box-shadow: 0 4px 15px 0 rgba(167, 167, 167, 0.2), 0 6px 20px 0 rgba(167, 167, 167, 0.1);
     transition: 0.3s;
 }
+
+.resultado-newsletter {
+    background-color: #004009;
+    color: #0acb00;
+    border-radius: 1px;
+    margin-top: 8px;
+}
+
+
 
 .icones-redes {
     margin-top: 22px;
