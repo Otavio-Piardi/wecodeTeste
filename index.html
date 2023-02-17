@@ -82,7 +82,7 @@
                                 <li><a>Categoria 3</a></li>
                             </ul>
                         </li>
-                        <li class="parte-menu parte-menu-8">
+                        <li class="parte-menu-8">
                             <p>Sair</p>
                         </li>
                     </ul>
@@ -360,21 +360,24 @@
         <section class="principal-footer">
             <img class="logo-wecode-footer" src="img/icon-footer-logotype.svg" alt="logotipo wecode">
             <div class="newsletter">
-                <form method="post" action="index.html">
+                <form method="post" action="index.html" name="newsletter">
                     <fieldset>
                         <legend class="titulo-footer">Newsletter</legend>
                         <p class="footer-newsletter-text">Receba novidades e ofertas através da nossa newsletter
                         </p>
                         <div class="enviar-email">
-                            <input id="nomeNewsletter" type="text" name="nome" placeholder="Digite seu nome" >
+                            <input id="nomeNewsletter" type="text" name="nome" placeholder="Digite seu nome">
                             <input id="telNewsletter" type="tel" name="telefone" placeholder="Digite seu telefone">
                             <input id="emailNewsletter" type="email" name="email" placeholder="Digite seu e-mail">
-                            <button type="button" id="btnEnviarNewsletter"><img class="botao-email-footer" src="img/icon-footer-mail.svg"></button>
+                            <button type="button" id="btnEnviarNewsletter"><img class="botao-email-footer"
+                                    src="img/icon-footer-mail.svg"></button>
                         </div>
                     </fieldset>
                 </form>
-
-                <div id="resultadoNewsletter" class="resultado-newsletter">
+                <div id="resultadoNewsletterInvalido" class="resultado-newsletter-invalido invisivel">
+                    <p>Preencha todos os campos corretamente!</p>
+                </div>
+                <div id="resultadoNewsletterValido" class="resultado-newsletter-valido invisivel">
                     <p id="mensagemNewsletterResultado"></p>
                     <p id="nomeNewsletterResultado"></p>
                     <p id="telNewsletterResultado"></p>
@@ -393,7 +396,7 @@
             <div class="gavetas" id="gavetas">
                 <ul>
                     <li>
-                        <a id="link-gaveta-sobre" href="#redes-sociais">
+                        <a class="link-gaveta" href="#redes-sociais">
                             <p>Sobre nós</p>
                             <p id="p-mais-menos-sobre">+</p>
                         </a>
@@ -403,7 +406,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a id="link-gaveta-conta" href="#redes-sociais">
+                        <a class="link-gaveta" href="#redes-sociais">
                             <p>Minha conta</p>
                             <p id="p-mais-menos-conta">+</p>
                         </a>
@@ -413,7 +416,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a id="link-gaveta-politicas" href="#redes-sociais">
+                        <a class="link-gaveta" href="#redes-sociais">
                             <p>Politicas</p>
                             <p id="p-mais-menos-politicas">+</p>
                         </a>
@@ -424,7 +427,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a id="link-gaveta-contato" href="#redes-sociais">
+                        <a class="link-gaveta" href="#redes-sociais">
                             <p>Contato</p>
                             <p id="p-mais-menos-contato">+</p>
                         </a>

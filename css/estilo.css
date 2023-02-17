@@ -36,6 +36,14 @@ a:focus {
     z-index: 4;
 }
 
+.invisivel {
+    display: none;
+}
+
+.visivel{
+    display: block;
+}
+
 #btn-fechar-menu-lateral {
     width: 20px;
     height: 20px;
@@ -189,17 +197,13 @@ a:focus {
     line-height: 21px;
 }
 
-.elementos-gaveta {
-    display: none;
-}
-
-.elemento-gaveta-departamento.ul-ativo li a {
-    color: #232323;
-    font-size: 14px;
-}
-
 .parte-menu-ativo {
+    display: block;
     background-color: #EEFF49;
+}
+
+.parte-menu-ativo a{
+    color: #000000;
     transition: 0.5s;
 }
 
@@ -621,14 +625,23 @@ input[type="radio"]:checked+label .radio-btn-footer {
     transition: 0.3s;
 }
 
-.resultado-newsletter {
+.resultado-newsletter-valido {
     background-color: #004009;
     color: #0acb00;
+    border: 0.1rem solid #0acb00;
     border-radius: 1px;
+    padding: 5px;
     margin-top: 8px;
 }
 
-
+.resultado-newsletter-invalido {
+    background-color: #400000;
+    color: #ff0000;
+    border: 0.1rem solid #ff0000;
+    border-radius: 1px;
+    padding: 5px;
+    margin-top: 8px;
+}
 
 .icones-redes {
     margin-top: 22px;

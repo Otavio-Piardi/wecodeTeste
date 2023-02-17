@@ -40,25 +40,46 @@ function menuPesquisaSwitch() {
     document.querySelector('#menu-pesquisa').style.display = 'none'
 }
 
-var dadosEnviados = false
+// -----------------------------------------------------------------------------------------
 
-document.querySelector('#btnEnviarNewsletter').addEventListener('click', function enviarDadosNewsletter() {
-    const nome = document.getElementById('nomeNewsletter').value;
-    const tel = document.getElementById('telNewsletter').value;
-    const email = document.getElementById('emailNewsletter').value;
+$(document).ready(function ($) {
+    $('.parte-menu ul').addClass('invisivel');
+    $('.parte-menu').click(function () {
+        $(this).toggleClass('parte-menu-ativo')
+        $(this).children('ul').toggleClass('invisivel')
+        $(this).siblings().children('ul').hide('fast')
+        
+        // $(this).children('ul').slideToggle('fast')
+        // $(this).toggleClass('parte-menu-ativo')
+        // if($(this).siblings().children().hasClass('hidden')){
+            //fechado = removeClass('parte-menu-ativo')
+        // }
+    });
+});
 
-    if (!dadosEnviados) {
-        document.getElementById('mensagemNewsletterResultado').append('Dados enviados: \n')
-        document.getElementById('nomeNewsletterResultado').append("Nome: " + nome)
-        document.getElementById('telNewsletterResultado').append("Telefone: " + tel)
-        document.getElementById('emailNewsletterResultado').append("E-mail: " + email)
-        dadosEnviados = true
+// -----------------------------------------------------------------------------------------
+
+$('#btnEnviarNewsletter').click(enviarDadosNewsletter)
+
+function enviarDadosNewsletter() {
+    const nome = $('#nomeNewsletter').val()
+    const tel = $('#telNewsletter').val()
+    const email = $('#emailNewsletter').val()
+
+    if (nome == "" || email == "" || tel == "") {
+        $('#resultadoNewsletterInvalido').removeClass('invisivel').addClass('visivel')
+        console.log('erro')
+        if ($('#resultadoNewsletterValido').hasClass('visivel')) {
+            $('#resultadoNewsletterValido').removeClass('visivel').addClass('invisivel')
+        }
     } else {
-        console.log('nao foi po')
+        $('#resultadoNewsletterValido').removeClass('invisivel').addClass('visivel')
+        $('#mensagemNewsletterResultado').text("Dados enviados! \n")
+        $('#nomeNewsletterResultado').text("Nome: " + nome)
+        $('#telNewsletterResultado').text("Telefone: " + tel)
+        $('#emailNewsletterResultado').text("E-mail: " + email)
+        if ($('#resultadoNewsletterInvalido').hasClass('visivel')) {
+            $('#resultadoNewsletterInvalido').removeClass('visivel').addClass('invisivel')
+        }
     }
-
-})
-
-document.querySelector('.link-gaveta-departamento').addEventListener('click', function abrirMenuNivel () {
-    $(this.style.display = "block")
-})
+}
