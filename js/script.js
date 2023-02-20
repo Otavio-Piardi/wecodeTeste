@@ -40,24 +40,34 @@ function menuPesquisaSwitch() {
     document.querySelector('#menu-pesquisa').style.display = 'none'
 }
 
-// -----------------------------------------------------------------------------------------
+// -------------------------------------------------------------
 
 $(document).ready(function ($) {
     $('.parte-menu ul').addClass('invisivel');
+    $('.elementos-gaveta').addClass('invisivel');
     $('.parte-menu').click(function () {
-        $(this).toggleClass('parte-menu-ativo')
-        $(this).children('ul').toggleClass('invisivel')
+        $(this).siblings().children('ul').hide('fast');
+        $(this).children('ul').slideToggle('fast');
+        $(this).toggleClass('parte-menu-ativo');
+        if ($(this).siblings().hasClass('parte-menu-ativo')) {
+            $(this).siblings().removeClass('parte-menu-ativo')
+        }
+    })
+
+    $('.dropdown').click(function () {
         $(this).siblings().children('ul').hide('fast')
-        
-        // $(this).children('ul').slideToggle('fast')
-        // $(this).toggleClass('parte-menu-ativo')
-        // if($(this).siblings().children().hasClass('hidden')){
-            //fechado = removeClass('parte-menu-ativo')
-        // }
-    });
+        $(this).children('ul').toggle('fast')
+        $(this).siblings('ul').toggleClass('invisivel')
+        $(this).children('.link-gaveta').children('.p-menos').toggleClass('invisivel')
+        $(this).children('.link-gaveta').children('.p-mais').toggleClass('invisivel')
+        if ($(this).siblings().children('.link-gaveta').children('.p-mais').hasClass('invisivel')) {
+            $(this).siblings().children('.link-gaveta').children('.p-mais').removeClass('invisivel')
+            $(this).siblings().children('.link-gaveta').children('.p-menos').addClass('invisivel')
+        }
+    })
 });
 
-// -----------------------------------------------------------------------------------------
+// -------------------------------------------------------------
 
 $('#btnEnviarNewsletter').click(enviarDadosNewsletter)
 
@@ -66,7 +76,7 @@ function enviarDadosNewsletter() {
     const tel = $('#telNewsletter').val()
     const email = $('#emailNewsletter').val()
 
-    if (nome == "" || email == "" || tel == "") {
+    if (nome == "" || email == "" || tel == "" || !email.includes('@')) {
         $('#resultadoNewsletterInvalido').removeClass('invisivel').addClass('visivel')
         console.log('erro')
         if ($('#resultadoNewsletterValido').hasClass('visivel')) {

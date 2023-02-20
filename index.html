@@ -367,7 +367,7 @@
                         </p>
                         <div class="enviar-email">
                             <input id="nomeNewsletter" type="text" name="nome" placeholder="Digite seu nome">
-                            <input id="telNewsletter" type="tel" name="telefone" placeholder="Digite seu telefone">
+                            <input id="telNewsletter" type="number" name="telefone" placeholder="Digite seu telefone">
                             <input id="emailNewsletter" type="email" name="email" placeholder="Digite seu e-mail">
                             <button type="button" id="btnEnviarNewsletter"><img class="botao-email-footer"
                                     src="img/icon-footer-mail.svg"></button>
@@ -395,30 +395,33 @@
             </div>
             <div class="gavetas" id="gavetas">
                 <ul>
-                    <li>
-                        <a class="link-gaveta" href="#redes-sociais">
+                    <li class="dropdown">
+                        <a class="link-gaveta">
                             <p>Sobre nós</p>
-                            <p id="p-mais-menos-sobre">+</p>
+                            <p class="p-mais">+</p>
+                            <p class="p-menos invisivel">-</p>
                         </a>
                         <ul class="elementos-gaveta">
                             <li><a href="#redes-sociais">Quem somos nós</a></li>
                             <li><a href="#redes-sociais">Nosso grupo</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a class="link-gaveta" href="#redes-sociais">
+                    <li class="dropdown">
+                        <a class="link-gaveta">
                             <p>Minha conta</p>
-                            <p id="p-mais-menos-conta">+</p>
+                            <p class="p-mais">+</p>
+                            <p class="p-menos invisivel">-</p>
                         </a>
                         <ul class="elementos-gaveta">
                             <li><a href="#redes-sociais">Meu perfil</a></li>
                             <li><a href="#redes-sociais">Meus pedidos</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a class="link-gaveta" href="#redes-sociais">
+                    <li class="dropdown">
+                        <a class="link-gaveta">
                             <p>Politicas</p>
-                            <p id="p-mais-menos-politicas">+</p>
+                            <p class="p-mais">+</p>
+                            <p class="p-menos invisivel">-</p>
                         </a>
                         <ul class="elementos-gaveta">
                             <li><a href="#redes-sociais">Políticas de troca e devolução</a></li>
@@ -426,10 +429,11 @@
                             <li><a href="#redes-sociais">Termos de Uso</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a class="link-gaveta" href="#redes-sociais">
+                    <li class="dropdown">
+                        <a class="link-gaveta">
                             <p>Contato</p>
-                            <p id="p-mais-menos-contato">+</p>
+                            <p class="p-mais">+</p>
+                            <p class="p-menos invisivel">-</p>
                         </a>
                         <ul class="elementos-gaveta">
                             <li>

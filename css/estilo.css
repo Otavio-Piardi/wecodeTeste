@@ -40,10 +40,6 @@ a:focus {
     display: none;
 }
 
-.visivel{
-    display: block;
-}
-
 #btn-fechar-menu-lateral {
     width: 20px;
     height: 20px;
@@ -200,6 +196,7 @@ a:focus {
 .parte-menu-ativo {
     display: block;
     background-color: #EEFF49;
+    transition: 0.4s;
 }
 
 .parte-menu-ativo a{
