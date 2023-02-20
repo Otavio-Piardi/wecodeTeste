@@ -43,26 +43,38 @@ function menuPesquisaSwitch() {
 // -------------------------------------------------------------
 
 $(document).ready(function ($) {
-    $('.parte-menu ul').addClass('invisivel');
-    $('.elementos-gaveta').addClass('invisivel');
+    $('.parte-menu ul').addClass('invisivel')
+    $('.elementos-gaveta').addClass('invisivel')
+
     $('.parte-menu').click(function () {
-        $(this).siblings().children('ul').hide('fast');
-        $(this).children('ul').slideToggle('fast');
-        $(this).toggleClass('parte-menu-ativo');
-        if ($(this).siblings().hasClass('parte-menu-ativo')) {
-            $(this).siblings().removeClass('parte-menu-ativo')
+        const listaOutroDepartamento = $(this).siblings().children('ul')
+        const listaMesmoDepartamento = $(this).children('ul')
+        const irmaosParteMenu = $(this).siblings()
+
+        listaOutroDepartamento.hide('fast')
+        listaMesmoDepartamento.slideToggle('fast')
+        $(this).toggleClass('parte-menu-ativo')
+
+        if (irmaosParteMenu.hasClass('parte-menu-ativo')) {
+            irmaosParteMenu.removeClass('parte-menu-ativo')
         }
     })
 
     $('.dropdown').click(function () {
+        const dropdownPMenos = $(this).children('.link-gaveta').children('.p-menos')
+        const dropdownPMais = $(this).children('.link-gaveta').children('.p-mais')
+        const dropdownIrmaosPMais = $(this).siblings().children('.link-gaveta').children('.p-mais')
+        const dropdownIrmaosPMenos = $(this).siblings().children('.link-gaveta').children('.p-menos')
+
         $(this).siblings().children('ul').hide('fast')
         $(this).children('ul').toggle('fast')
         $(this).siblings('ul').toggleClass('invisivel')
-        $(this).children('.link-gaveta').children('.p-menos').toggleClass('invisivel')
-        $(this).children('.link-gaveta').children('.p-mais').toggleClass('invisivel')
-        if ($(this).siblings().children('.link-gaveta').children('.p-mais').hasClass('invisivel')) {
-            $(this).siblings().children('.link-gaveta').children('.p-mais').removeClass('invisivel')
-            $(this).siblings().children('.link-gaveta').children('.p-menos').addClass('invisivel')
+        dropdownPMenos.toggleClass('invisivel')
+        dropdownPMais.toggleClass('invisivel')
+
+        if (dropdownIrmaosPMais.hasClass('invisivel')) {
+            dropdownIrmaosPMais.removeClass('invisivel')
+            dropdownIrmaosPMenos.addClass('invisivel')
         }
     })
 });
