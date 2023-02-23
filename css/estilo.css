@@ -129,6 +129,10 @@ a:focus {
     transition: margin 0.4s;
 }
 
+.parte-menu {
+    transition: 0.4s;
+}
+
 .parte-menu-1,
 .parte-menu-2,
 .parte-menu-3,
@@ -199,7 +203,7 @@ a:focus {
     transition: 0.4s;
 }
 
-.parte-menu-ativo a{
+.parte-menu-ativo a {
     color: #000000;
     transition: 0.5s;
 }

@@ -90,9 +90,9 @@ function enviarDadosNewsletter() {
 
     if (nome == "" || email == "" || tel == "" || !email.includes('@')) {
         $('#resultadoNewsletterInvalido').removeClass('invisivel').addClass('visivel')
-        console.log('erro')
+        
         if ($('#resultadoNewsletterValido').hasClass('visivel')) {
-            $('#resultadoNewsletterValido').removeClass('visivel').addClass('invisivel')
+            $('#resultadoNewsletterValido').toggleClass('invisivel', 'visivel')
         }
     } else {
         $('#resultadoNewsletterValido').removeClass('invisivel').addClass('visivel')
@@ -100,8 +100,9 @@ function enviarDadosNewsletter() {
         $('#nomeNewsletterResultado').text("Nome: " + nome)
         $('#telNewsletterResultado').text("Telefone: " + tel)
         $('#emailNewsletterResultado').text("E-mail: " + email)
+
         if ($('#resultadoNewsletterInvalido').hasClass('visivel')) {
-            $('#resultadoNewsletterInvalido').removeClass('visivel').addClass('invisivel')
+            $('#resultadoNewsletterInvalido').toggleClass('invisivel', 'visivel')
         }
     }
 }
